@@ -6,7 +6,7 @@
 	let percentage = '15';
 	let subtotal = '0';
 	$: numPercentage = parseInt(percentage);
-	$: numSub = subtotal ? parseInt(subtotal) : 0;
+	$: numSub = subtotal ? parseFloat(subtotal) : 0;
 	$: rightPercentage = formatCurrency(numSub * (numPercentage / 100));
 
 	function subtotalFocus() {
