@@ -8,10 +8,14 @@
 	$: numPercentage = parseInt(percentage);
 	$: numSub = subtotal ? parseInt(subtotal) : 0;
 	$: rightPercentage = formatCurrency(numSub * (numPercentage / 100));
+
+	function subtotalFocus() {
+		subtotal = '';
+	}
 </script>
 
 <form on:submit|preventDefault>
-	<Field label="Subtotal" type="number" bind:value={subtotal} />
+	<Field label="Subtotal" type="number" bind:value={subtotal} on:focus={subtotalFocus} />
 	<Range min={10} max={35} step={5} label="Tip Percentage" class="py-8" bind:value={percentage} />
 </form>
 

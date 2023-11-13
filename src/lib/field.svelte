@@ -22,6 +22,7 @@
 			class="p-4 rounded-md w-full block text-purple-dark dark:text-green dark:bg-green-dark appearance-none"
 			{...{ id, type, required }}
 			bind:value
+			on:focus
 		/>
 	</div>
 </div>
