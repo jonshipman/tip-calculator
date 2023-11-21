@@ -8,30 +8,34 @@ body {
 
 @layer components {
 	.border-inset-up-blue {
-		border-bottom: solid theme('borderWidth.4') theme('colors.blue.800');
-		border-right: solid theme('borderWidth.4') theme('colors.blue.800');
-		border-top: solid theme('borderWidth.4') theme('colors.blue.100');
-		border-left: solid theme('borderWidth.4') theme('colors.blue.100');
+		@apply border-4;
+		border-bottom-color: theme('colors.blue.800');
+		border-right-color: theme('colors.blue.800');
+		border-top-color: theme('colors.blue.100');
+		border-left-color: theme('colors.blue.100');
 	}
 
 	.border-inset-down-blue {
-		border-top: solid theme('borderWidth.4') theme('colors.blue.800');
-		border-left: solid theme('borderWidth.4') theme('colors.blue.800');
-		border-bottom: solid theme('borderWidth.4') theme('colors.blue.100');
-		border-right: solid theme('borderWidth.4') theme('colors.blue.100');
+		@apply border-4;
+		border-top-color: theme('colors.blue.800');
+		border-left-color: theme('colors.blue.800');
+		border-bottom-color: theme('colors.blue.100');
+		border-right-color: theme('colors.blue.100');
 	}
 
 	.border-inset-up-red {
-		border-bottom: solid theme('borderWidth.4') theme('colors.red.900');
-		border-right: solid theme('borderWidth.4') theme('colors.red.900');
-		border-top: solid theme('borderWidth.4') theme('colors.red.300');
-		border-left: solid theme('borderWidth.4') theme('colors.red.300');
+		@apply border-4;
+		border-bottom-color: theme('colors.red.900');
+		border-right-color: theme('colors.red.900');
+		border-top-color: theme('colors.red.300');
+		border-left-color: theme('colors.red.300');
 	}
 
 	.border-inset-down-red {
-		border-top: solid theme('borderWidth.4') theme('colors.red.900');
-		border-left: solid theme('borderWidth.4') theme('colors.red.900');
-		border-bottom: solid theme('borderWidth.4') theme('colors.red.300');
-		border-right: solid theme('borderWidth.4') theme('colors.red.300');
+		@apply border-4;
+		border-top-color: theme('colors.red.900');
+		border-left-color: theme('colors.red.900');
+		border-bottom-color: theme('colors.red.300');
+		border-right-color: theme('colors.red.300');
 	}
 }

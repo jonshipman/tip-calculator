@@ -57,7 +57,7 @@
 			>
 				<Arrow class="w-5" />
 			</Button>
-			<Button value="{percentage}%" class="bg-red-800 text-tan" />
+			<Button value="{percentage}%" class="bg-red-800 text-tan" disabled />
 			<Button
 				disabled={numPercentage === 10}
 				on:click={handlePercentageDown}
