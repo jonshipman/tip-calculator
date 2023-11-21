@@ -50,12 +50,12 @@
 	on:click={handleClick}
 	bind:element={button}
 >
-	<div
-		class="{insetClass} py-4 px-8 w-full select-none cursor-pointer flex items-center justify-center text-4xl"
+	<Padding
+		class="{insetClass} w-full select-none cursor-pointer flex items-center justify-center text-xl md:text-4xl"
 	>
 		{value}
 		<slot />
-	</div>
+	</Padding>
 </Border>
 
 <div class="hidden border-inset-up-blue active:border-inset-down-blue" />

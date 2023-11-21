@@ -20,8 +20,10 @@
 	{role}
 	{...{ tabindex }}
 	class="border-blue-900 {className}"
-	class:border-t-12={top}
-	class:border-12={!top}
+	class:lg:border-t-12={top}
+	class:lg:border-12={!top}
+	class:border-t-4={top}
+	class:border-4={!top}
 	class:rounded-2xl={!square}
 >
 	<slot />

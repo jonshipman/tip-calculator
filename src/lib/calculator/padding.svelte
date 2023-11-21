@@ -11,7 +11,7 @@
 </script>
 
 <div
-	class="py-4 px-8 {className}"
+	class="py-2 px-4 md:py-4 md:px-8 {className}"
 	on:click
 	on:keypress={() => dispatch('click')}
 	{role}
