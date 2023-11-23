@@ -17,6 +17,9 @@
 	onMount(() => {
 		const action = (event: KeyboardEvent & { key: string }) => {
 			if (event.key === value) handleClick();
+
+			if (value === 'CLR' && event.key === 'Escape') handleClick();
+			if (value === 'CLR' && event.key === 'Backspace') handleClick();
 		};
 
 		window.addEventListener('keydown', action);
