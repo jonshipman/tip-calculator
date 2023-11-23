@@ -3,6 +3,10 @@ export default {
 	content: ['./src/**/*.{html,js,svelte}'],
 	theme: {
 		extend: {
+			screens: {
+				'x-2': { raw: '(horizontal-viewport-segments): 2' },
+				'y-2': { raw: '(vertical-viewport-segments): 2' }
+			},
 			fontFamily: {
 				sans: ['Changa', 'system-ui', 'sans-serif']
 			},
