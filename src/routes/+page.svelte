@@ -92,6 +92,11 @@
 	</Body>
 </div>
 
+<div
+	class="hidden border-inset-up-blue active:border-inset-down-blue
+ border-inset-up-red active:border-inset-down-red py-2 px-4 md:py-4 md:px-8 border-blue-900 lg:border-t-12 border-t-4 lg:border-12 border-4 rounded-2xl"
+/>
+
 <style>
 	.span-4 {
 		grid-row: span 4;

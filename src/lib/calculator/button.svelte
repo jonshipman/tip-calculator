@@ -57,6 +57,3 @@
 		<slot />
 	</div>
 </div>
-
-<div class="hidden border-inset-up-blue active:border-inset-down-blue" />
-<div class="hidden border-inset-up-red active:border-inset-down-red" />
