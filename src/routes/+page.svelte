@@ -5,9 +5,11 @@
 
 	let percentage = '15';
 	$: numPercentage = parseInt(percentage);
-	$: numSub = $CalculatorStore ? parseFloat($CalculatorStore) : 0;
-	$: displayTotal = formatCurrency(numSub);
-	$: rightPercentage = formatCurrency(numSub * (numPercentage / 100));
+	$: numEnteredAmount = $CalculatorStore ? parseFloat($CalculatorStore) : 0;
+	$: formattedEnteredAmount = formatCurrency(numEnteredAmount);
+	$: tip = numEnteredAmount * (numPercentage / 100);
+	$: fomattedTip = formatCurrency(tip);
+	$: total = formatCurrency(numEnteredAmount + tip);
 
 	function handleNumbers(event: Event & { detail: string }) {
 		const value = event.detail;
@@ -36,13 +38,21 @@
 
 <div class="{getBorder()} overflow-hidden bg-tan">
 	<Display>
-		<div class="pb-4 border-b border-tan-800 mb-4 flex items-center">
+		<div class="opacity-50">{formattedEnteredAmount}</div>
+		<div class="py-4 border-t border-b border-tan-800 my-4 flex items-center">
 			<div class="grow text-left">
 				<div class="inline-block rounded-full bg-tan-800 text-gray-600 text-xs px-4 py-2">TIP</div>
 			</div>
-			<div class="text-5xl">{rightPercentage}</div>
+			<div class="text-5xl">{fomattedTip}</div>
 		</div>
-		<div class="opacity-50">{displayTotal}</div>
+		<div class="flex items-center">
+			<div class="grow text-left">
+				<div class="inline-block rounded-full bg-tan-800 text-gray-600 text-xs px-4 py-2">
+					TOTAL
+				</div>
+			</div>
+			<div class="text-2xl">{total}</div>
+		</div>
 	</Display>
 
 	<Body>
