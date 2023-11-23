@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { Arrow, Body, Border, Button, CalculatorStore, Display } from '$lib/calculator';
+	import { Arrow, Body, Button, CalculatorStore, Display } from '$lib/calculator';
+	import { getBorder } from '$lib/config';
 	import { formatCurrency } from '$lib/util/format-currency';
 
 	let percentage = '15';
@@ -33,7 +34,7 @@
 	}
 </script>
 
-<Border class="overflow-hidden bg-tan">
+<div class="{getBorder()} overflow-hidden bg-tan">
 	<Display>
 		<div class="pb-4 border-b border-tan-800 mb-4 flex items-center">
 			<div class="grow text-left">
@@ -79,7 +80,7 @@
 		<Button on:click={handleNumbers} value="0" />
 		<Button on:click={handleNumbers} value="." />
 	</Body>
-</Border>
+</div>
 
 <style>
 	.span-4 {

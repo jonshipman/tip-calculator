@@ -1,7 +1,6 @@
 <script lang="ts">
+	import { getBorder, paddingClasses } from '$lib/config';
 	import { createEventDispatcher, onMount } from 'svelte';
-	import Border from './border.svelte';
-	import Padding from './padding.svelte';
 
 	let className = 'bg-blue text-tan';
 	let button: HTMLDivElement;
@@ -43,20 +42,21 @@
 	export { className as class };
 </script>
 
-<Border
-	class="overflow-hidden flex items-stretch {className}"
+<div
+	class="{getBorder()} overflow-hidden flex items-stretch {className}"
 	role="button"
 	tabindex={0}
 	on:click={handleClick}
-	bind:element={button}
+	on:keydown={handleClick}
+	bind:this={button}
 >
-	<Padding
-		class="{insetClass} w-full select-none cursor-pointer flex items-center justify-center text-xl md:text-4xl"
+	<div
+		class="{insetClass} {paddingClasses} w-full select-none cursor-pointer flex items-center justify-center text-xl md:text-4xl"
 	>
 		{value}
 		<slot />
-	</Padding>
-</Border>
+	</div>
+</div>
 
 <div class="hidden border-inset-up-blue active:border-inset-down-blue" />
 <div class="hidden border-inset-up-red active:border-inset-down-red" />

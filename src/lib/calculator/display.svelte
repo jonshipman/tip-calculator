@@ -1,12 +1,11 @@
 <script>
-	import Padding from './padding.svelte';
-	import Border from './border.svelte';
-</script>
+	import { getBorder, paddingClasses } from '$lib/config';
+	</script>
 
-<Padding class="bg-blue">
-	<Border class="bg-tan">
-		<Padding class="text-right">
+<div class="{paddingClasses} bg-blue">
+	<div class="{getBorder()} bg-tan">
+		<div class="{paddingClasses} text-right">
 			<slot />
-		</Padding>
-	</Border>
-</Padding>
+		</div>
+	</div>
+</div>
