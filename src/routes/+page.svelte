@@ -36,7 +36,7 @@
 </script>
 
 <div
-	class="border-blue-900 lg:border-12 border-4 rounded-2xl min-w-360 overflow-hidden bg-tan min-w-"
+	class="border-blue-900 lg:border-12 border-4 rounded-2xl min-w-360 overflow-hidden bg-tan dark:bg-gray-800"
 >
 	<Display>
 		<div class="opacity-50">{formattedEnteredAmount}</div>
