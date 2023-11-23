@@ -14,6 +14,9 @@ export default {
 			},
 			borderWidth: {
 				12: '12px'
+			},
+			minWidth: {
+				360: '360px'
 			}
 		}
 	},

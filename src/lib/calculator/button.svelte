@@ -51,7 +51,7 @@
 	bind:this={button}
 >
 	<div
-		class="inner {insetClass} {paddingClasses} rounded-2xl w-full select-none cursor-pointer flex items-center justify-center text-xl md:text-4xl"
+		class="inner {insetClass} {paddingClasses} rounded-2xl w-full select-none cursor-pointer flex items-center justify-center text-sm sm:text-xl md:text-4xl"
 	>
 		{value}
 		<slot />

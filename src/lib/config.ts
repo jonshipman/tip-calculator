@@ -1,4 +1,4 @@
-export const paddingClasses = 'py-2 md:py-4 px-4 md:py-4 md:px-8';
+export const paddingClasses = 'py-1 px-2 sm:py-2 sm:px-4 md:py-4 md:px-8';
 
 export function getBorder(top = false, square = false): string {
 	let classes = 'border-blue-900';
