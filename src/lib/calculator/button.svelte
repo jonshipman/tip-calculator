@@ -51,9 +51,21 @@
 	bind:this={button}
 >
 	<div
-		class="{insetClass} {paddingClasses} rounded-xl w-full select-none cursor-pointer flex items-center justify-center text-xl md:text-4xl"
+		class="inner {insetClass} {paddingClasses} rounded-2xl w-full select-none cursor-pointer flex items-center justify-center text-xl md:text-4xl"
 	>
 		{value}
 		<slot />
 	</div>
 </div>
+
+<style lang="postcss">
+	.inner {
+		outline: 2px solid theme('colors.blue.900');
+	}
+
+	@screen lg {
+		.inner {
+			outline: 12px solid theme('colors.blue.900');
+		}
+	}
+</style>
