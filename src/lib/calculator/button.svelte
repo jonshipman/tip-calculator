@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { getBorder, paddingClasses } from '$lib/config';
 	import { createEventDispatcher, onMount } from 'svelte';
 
 	let className = 'bg-blue text-tan';
@@ -10,18 +9,6 @@
 	const dispatch = createEventDispatcher();
 
 	$: isRed = className.includes('bg-red');
-	$: insetClass = handleGetInsetClass({ isRed, disabled });
-
-	function handleGetInsetClass(props: { isRed: boolean; disabled: boolean }) {
-		const color = props.isRed ? 'red' : 'blue';
-		let classes = `border-inset-up-${color}`;
-
-		if (!disabled) {
-			classes += ` active:border-inset-down-${color}`;
-		}
-
-		return classes;
-	}
 
 	function handleClick() {
 		if (!disabled) dispatch('click', value);
@@ -43,7 +30,7 @@
 </script>
 
 <div
-	class="{getBorder()} overflow-hidden flex items-stretch {className}"
+	class="border-blue-900 lg:border-12 border-4 rounded-2xl overflow-hidden flex items-stretch {className}"
 	role="button"
 	tabindex={0}
 	on:click={handleClick}
@@ -51,7 +38,11 @@
 	bind:this={button}
 >
 	<div
-		class="inner {insetClass} {paddingClasses} rounded-2xl w-full select-none cursor-pointer flex items-center justify-center text-sm sm:text-xl md:text-4xl"
+		class:border-inset-up-red={isRed}
+		class:border-inset-up-blue={!isRed}
+		class:active:border-inset-down-red={isRed && !disabled}
+		class:active:border-inset-down-blue={!isRed && !disabled}
+		class="inner py-1 px-2 sm:py-2 sm:px-4 md:py-4 md:px-8 rounded-2xl w-full select-none cursor-pointer flex items-center justify-center text-sm sm:text-xl md:text-4xl"
 	>
 		{value}
 		<slot />
@@ -67,5 +58,10 @@
 		.inner {
 			outline: 12px solid theme('colors.blue.900');
 		}
+	}
+
+	div {
+		-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+		-webkit-focus-ring-color: rgba(255, 255, 255, 0);
 	}
 </style>

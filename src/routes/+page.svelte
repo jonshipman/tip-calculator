@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { Arrow, Body, Button, CalculatorStore, Display } from '$lib/calculator';
-	import { getBorder } from '$lib/config';
 	import { formatCurrency } from '$lib/util/format-currency';
 
 	let percentage = '15';
@@ -36,7 +35,9 @@
 	}
 </script>
 
-<div class="{getBorder()} min-w-360 overflow-hidden bg-tan min-w-">
+<div
+	class="border-blue-900 lg:border-12 border-4 rounded-2xl min-w-360 overflow-hidden bg-tan min-w-"
+>
 	<Display>
 		<div class="opacity-50">{formattedEnteredAmount}</div>
 		<div class="py-4 border-t border-b border-tan-800 my-4 flex items-center">
@@ -91,11 +92,6 @@
 		<Button on:click={handleNumbers} value="." />
 	</Body>
 </div>
-
-<div
-	class="hidden border-inset-up-blue active:border-inset-down-blue
- border-inset-up-red active:border-inset-down-red py-1 px-2 sm:py-2 sm:px-4 md:py-4 md:px-8 border-blue-900 lg:border-t-12 border-t-4 lg:border-12 border-4 rounded-2xl"
-/>
 
 <style>
 	.span-4 {
