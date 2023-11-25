@@ -5,7 +5,7 @@
 
 <div
 	style="--bg: url('{bg}')"
-	class="wrapper-light dark:wrapper-dark bg-cover p-4 dark:text-tan h-screen overflow-x-auto flex items-center"
+	class="wrapper-light dark:wrapper-dark bg-cover p-4 dark:text-tan h-screen overflow-x-auto overflow-y-hidden flex items-center"
 >
 	<div class="w-full overflow-y-auto max-h-screen">
 		<slot />
