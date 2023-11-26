@@ -8,6 +8,7 @@
 		"preview": "vite preview",
 		"start": "vite preview --host",
 		"sync": "npx cap sync",
+		"postsync": "npx capacitor-assets generate --android",
 		"open": "npx cap open android",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
@@ -16,6 +17,7 @@
 	},
 	"devDependencies": {
 		"@capacitor/android": "^5.5.1",
+		"@capacitor/assets": "^3.0.1",
 		"@capacitor/cli": "^5.5.1",
 		"@capacitor/core": "^5.5.1",
 		"@sveltejs/adapter-static": "^2.0.3",
